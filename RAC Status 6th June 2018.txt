@@ -1,0 +1,278 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2018.06.06 23:55:27 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ROOT    root
+root@192.17.1.91's password: 
+Last login: Wed May 30 15:34:13 2018 from netreach1.compass.org.sg[?1034h[root@mspdb01 ~]# 
+[root@mspdb01 ~]# su - oracle
+Last login: Wed Jun  6 19:45:36 SGT 2018
+[?1034h[oracle@mspdb01 ~]$ 
+[oracle@mspdb01 ~]$     Server1 Space
+[oracle@mspdb01 ~]$ df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-root          50G   11G   40G  21% /
+devtmpfs                      252G     0  252G   0% /dev
+tmpfs                         252G  1.1G  251G   1% /dev/shm
+tmpfs                         252G  1.3G  251G   1% /run
+tmpfs                         252G     0  252G   0% /sys/fs/cgroup
+/dev/sda4                    1014M  199M  816M  20% /boot
+/dev/sda1                     496M  9.5M  487M   2% /boot/efi
+/dev/mapper/node1vg-usrlv     109G  101G  7.0G  94% /mdb/usr
+/dev/mapper/node1vg-applv      99G   61M   98G   1% /mdb/app
+/dev/mapper/node1vg-backuplv  2.0T  1.4T  617G  70% /backup
+/dev/mapper/rhel-home         100G   12G   89G  12% /home
+/dev/mapper/rhel-tmp          5.0G   43M  5.0G   1% /tmp
+/dev/mapper/rhel-updates       10G   33M   10G   1% /updates
+tmpfs                          51G   16K   51G   1% /run/user/42
+tmpfs                          51G     0   51G   0% /run/user/54321
+tmpfs                          51G     0   51G   0% /run/user/0
+[oracle@mspdb01 ~]$ 
+[oracle@mspdb01 ~]$ 
+[oracle@mspdb01 ~]$ ssh oracle@mspdb01[K2
+Last login: Wed Jun  6 20:59:47 2018[?1034h[oracle@mspdb02 ~]$ 
+[oracle@mspdb02 ~]$ Server2 Space
+[oracle@mspdb02 ~]$ df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-root          50G   11G   40G  22% /
+devtmpfs                      252G     0  252G   0% /dev
+tmpfs                         252G 1022M  251G   1% /dev/shm
+tmpfs                         252G  4.1G  248G   2% /run
+tmpfs                         252G     0  252G   0% /sys/fs/cgroup
+/dev/sda4                    1014M  199M  816M  20% /boot
+/dev/sda1                     200M  9.5M  191M   5% /boot/efi
+/dev/mapper/node2vg-usrlv     109G   71G   37G  67% /mdb/usr
+/dev/mapper/node2vg-applv      99G   61M   98G   1% /mdb/app
+/dev/mapper/node2vg-backuplv  2.0T  636G  1.4T  32% /backup
+/dev/mapper/rhel-home         100G   38G   63G  38% /home
+/dev/mapper/rhel-updates       10G   33M   10G   1% /updates
+/dev/mapper/rhel-tmp          5.0G   42M  5.0G   1% /tmp
+tmpfs                          51G   20K   51G   1% /run/user/42
+tmpfs                          51G     0   51G   0% /run/user/54321
+[oracle@mspdb02 ~]$ 
+[oracle@mspdb02 ~]$ ssh oracle@mspdb02
+Last login: Wed Jun  6 23:49:14 2018 from mspdb01.compass.org.sg[?1034h[oracle@mspdb02 ~]$ ssh oracle@mspdb02[K3
+Last login: Wed Jun  6 19:21:58 2018[?1034h[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$    Server2 Space
+[oracle@mspdb03 ~]$ df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-root          50G   12G   39G  23% /
+devtmpfs                      252G     0  252G   0% /dev
+tmpfs                         252G  745M  252G   1% /dev/shm
+tmpfs                         252G  773M  252G   1% /run
+tmpfs                         252G     0  252G   0% /sys/fs/cgroup
+/dev/sda2                    1014M  167M  848M  17% /boot
+/dev/sda1                     496M  9.6M  487M   2% /boot/efi
+/dev/mapper/rhel-update        10G   33M   10G   1% /update
+/dev/mapper/node3vg-applv     100G   33M  100G   1% /mdb/app
+/dev/mapper/node3vg-usrlv     110G   67G   44G  61% /mdb/usr
+/dev/mapper/node3vg-backuplv  2.0T  931G  1.1T  46% /backup
+/dev/mapper/rhel-tmp          5.0G   42M  5.0G   1% /tmp
+/dev/mapper/rhel-home         100G   45G   56G  45% /home
+tmpfs                          51G   16K   51G   1% /run/user/42
+tmpfs                          51G     0   51G   0% /run/user/54321
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ . /mi
+-bash: /mi: No such file or directory
+[oracle@mspdb03 ~]$ . ./misdb3.env 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ df -h
+Filesystem                    Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-root          50G   12G   39G  23% /
+devtmpfs                      252G     0  252G   0% /dev
+tmpfs                         252G  745M  252G   1% /dev/shm
+tmpfs                         252G  773M  252G   1% /run
+tmpfs                         252G     0  252G   0% /sys/fs/cgroup
+/dev/sda2                    1014M  167M  848M  17% /boot
+/dev/sda1                     496M  9.6M  487M   2% /boot/efi
+/dev/mapper/rhel-update        10G   33M   10G   1% /update
+/dev/mapper/node3vg-applv     100G   33M  100G   1% /mdb/app
+/dev/mapper/node3vg-usrlv     110G   67G   44G  61% /mdb/usr
+/dev/mapper/node3vg-backuplv  2.0T  931G  1.1T  46% /backup
+/dev/mapper/rhel-tmp          5.0G   42M  5.0G   1% /tmp
+/dev/mapper/rhel-home         100G   45G   56G  45% /home
+tmpfs                          51G   16K   51G   1% /run/user/42
+tmpfs                          51G     0   51G   0% /run/user/54321
+[oracle@mspdb03 ~]$ [K[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ssh oracle@mspdb02[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K#######RAC Node Apps Health Checks#####
+[oracle@mspdb03 ~]$ srvctl status nodeapps
+VIP mspdb01-vip.compass.org.sg is enabled
+VIP mspdb01-vip.compass.org.sg is running on node: mspdb01
+VIP mspdb02-vip.compass.org.sg is enabled
+VIP mspdb02-vip.compass.org.sg is running on node: mspdb02
+VIP mspdb03-vip is enabled
+VIP mspdb03-vip is running on node: mspdb03
+Network is enabled
+Network is running on node: mspdb01
+Network is running on node: mspdb02
+Network is running on node: mspdb03
+ONS is enabled
+ONS daemon is running on node: mspdb01
+ONS daemon is running on node: mspdb02
+ONS daemon is running on node: mspdb03
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######ASM Status ######
+[oracle@mspdb03 ~]$ srvctl status asm
+ASM is running on mspdb01,mspdb03,mspdb02
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Database Status#####
+[oracle@mspdb03 ~]$ srvctl status database -d misdb
+Instance misdb1 is running on node mspdb01
+Instance misdb2 is running on node mspdb02
+Instance misdb3 is running on node mspdb03
+[oracle@mspdb03 ~]$ ######Database Services Status#####
+[oracle@mspdb03 ~]$ srvctl status service -d misdb
+Service misdb_new is running on instance(s) misdb2
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Listener Status#####
+[oracle@mspdb03 ~]$ srvctl status listener
+Listener LISTENER is enabled
+Listener LISTENER is running on node(s): mspdb01,mspdb03,mspdb02
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######SCAN VIP Status#####
+[oracle@mspdb03 ~]$ srvctl status scan
+SCAN VIP scan1 is enabled
+SCAN VIP scan1 is running on node mspdb03
+SCAN VIP scan2 is enabled
+SCAN VIP scan2 is running on node mspdb01
+SCAN VIP scan3 is enabled
+SCAN VIP scan3 is running on node mspdb02
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Scan Listener Status#####
+[oracle@mspdb03 ~]$ srvctl status scan_listener
+SCAN Listener LISTENER_SCAN1 is enabled
+SCAN listener LISTENER_SCAN1 is running on node mspdb03
+SCAN Listener LISTENER_SCAN2 is enabled
+SCAN listener LISTENER_SCAN2 is running on node mspdb01
+SCAN Listener LISTENER_SCAN3 is enabled
+SCAN listener LISTENER_SCAN3 is running on node mspdb02
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Server Status 1#####
+[oracle@mspdb03 ~]$ srvctl status server -n mspdb01
+Server name: mspdb01
+Server state: ONLINE
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Server Status 2#####
+[oracle@mspdb03 ~]$ srvctl status server -n mspdb02
+Server name: mspdb02
+Server state: ONLINE
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Server Status 1#####
+[oracle@mspdb03 ~]$ srvctl status server -n mspdb01
+Server name: mspdb01
+Server state: ONLINE
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Server Status 3#####
+[oracle@mspdb03 ~]$ srvctl status server -n mspdb03
+Server name: mspdb03
+Server state: ONLINE
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######CVU Status#####
+[oracle@mspdb03 ~]$ srvctl status cvu
+CVU is enabled and running on node mspdb02
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ ######Serverpool Details#####
+[oracle@mspdb03 ~]$ srvctl status srvpool
+Server pool name: Free
+Active servers count: 0
+Server pool name: Generic
+Active servers count: 3
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ cd /mdb/usr/grid/12.1.0/bin/
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ ######CRS Status#####
+[oracle@mspdb03 bin]$ crsctl check crs
+CRS-4638: Oracle High Availability Services is online
+CRS-4537: Cluster Ready Services is online
+CRS-4529: Cluster Synchronization Services is online
+CRS-4533: Event Manager is online
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ ######Cluster Status#####
+[oracle@mspdb03 bin]$ crsctl check cluster
+CRS-4537: Cluster Ready Services is online
+CRS-4529: Cluster Synchronization Services is online
+CRS-4533: Event Manager is online
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ ######RAC High Availability Services Status#####
+[oracle@mspdb03 bin]$ crsctl check has
+CRS-4638: Oracle High Availability Services is online
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ ######Cluster Interconnect Details#####
+[oracle@mspdb03 bin]$ oifcfg getif
+bond0  192.17.1.0  global  public
+em3  10.10.10.0  global  cluster_interconnect
+em4  10.10.11.0  global  cluster_interconnect
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ ######OCR Checks#####
+[oracle@mspdb03 bin]$ ocrcheck
+Status of Oracle Cluster Registry is as follows :
+	 Version                  :          4
+	 Total space (kbytes)     :     409568
+	 Used space (kbytes)      :       1848
+	 Available space (kbytes) :     407720
+	 ID                       :  812738541
+	 Device/File Name         :   +MDB_OCR
+                                    Device/File integrity check succeeded
+
+                                    Device/File not configured
+
+                                    Device/File not configured
+
+                                    Device/File not configured
+
+                                    Device/File not configured
+
+	 Cluster registry integrity check succeeded
+
+	 Logical corruption check bypassed due to non-privileged user
+
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ ######Voting Disk Status#####
+[oracle@mspdb03 bin]$ crsctl query css votedisk
+##  STATE    File Universal Id                File Name Disk group
+--  -----    -----------------                --------- ---------
+ 1. ONLINE   17e39df149034fe2bf8a12bcb6695447 (/dev/mapper/OCR1) [MDB_OCR]
+ 2. ONLINE   c47f9c0c6d584f27bf78c139e9192316 (/dev/mapper/OCR2) [MDB_OCR]
+ 3. ONLINE   8c626feaec164f77bf9b05d8b029c6ba (/dev/mapper/OCR3) [MDB_OCR]
+Located 3 voting disk(s).
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ ######Diskgroups Status ##
+[oracle@mspdb03 bin]$ crs_stat -t | grep -i dg
+ora....ACFS.[01;31m[Kdg[m[K ora....up.type ONLINE    ONLINE    mspdb01     
+ora....DATA.[01;31m[Kdg[m[K ora....up.type ONLINE    ONLINE    mspdb01     
+ora....ATA2.[01;31m[Kdg[m[K ora....up.type ONLINE    ONLINE    mspdb01     
+ora.MDB_FRA.[01;31m[Kdg[m[K ora....up.type ONLINE    ONLINE    mspdb01     
+ora.MDB_OCR.[01;31m[Kdg[m[K ora....up.type ONLINE    ONLINE    mspdb01     
+ora....REDO.[01;31m[Kdg[m[K ora....up.type ONLINE    ONLINE    mspdb01     
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ clear
+[3;J[H[2J[oracle@mspdb03 bin]$ 
+[oracle@mspdb03 bin]$ cd
+[oracle@mspdb03 ~]$ 
+[oracle@mspdb03 ~]$ 
